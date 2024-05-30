@@ -21,7 +21,9 @@ CREATE TABLE Juego (
     titulo VARCHAR(255) NOT NULL,
     fechaLanzamiento DATE,
     idGenero INT,
-    FOREIGN KEY (idGenero) REFERENCES Genero(idGenero)
+    idDesarrollador INT,
+    FOREIGN KEY (idGenero) REFERENCES Genero(idGenero),
+    FOREIGN KEY (idDesarrollador) REFERENCES Desarrollador(idDesarrollador)
 );
 
 CREATE TABLE JuegoPlataforma (
